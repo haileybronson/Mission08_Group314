@@ -10,5 +10,19 @@ namespace Mission08_Group314.Controllers
         {
             return View();
         }
+
+        [HttpGet]
+        public IActionResult ToDo()
+        {
+            return View("ToDo");
+        }
+
+        [HttpPost]
+
+        //"ToDo" is the class set up in the model 
+        public IActionResult ToDo(ToDo response) 
+        {
+            return View("Confirmation", response);
+        }
     }
 }
