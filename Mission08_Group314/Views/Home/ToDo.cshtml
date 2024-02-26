@@ -2,7 +2,40 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!--Build an app that allow the users to enter tasks with the following information:
+        //Task(Required)
+        //Due Date
+        //Quadrant(Required)
+        //Category(Dropdown containing options: Home, School, Work, Church)
+        //Completed(True/False) -->
+
+<form method="post">
+    <label asp-for="Task">Task:</label>
+    <input asp-for="Task" />
+    <br />
+
+    <label asp-for="DueDate">Due Date:</label>
+    <input asp-for="DueDate" />
+    <br>
+
+    <!-- limit 1-4 -->
+    <label asp-for="Quadrant">Quandrant:</label>
+    <input asp-for="Quandrant" />
+    <br />
+
+    <label asp-for="Category">Category: </label>
+    <select asp-for="Category">
+        <option value="">select a rating</option>
+        <option value="Home">Home</option>
+        <option value="School">School</option>
+        <option value="Work">Work</option>
+        <option value="Church">Church</option>
+
+    </select>
+    <br />
+    <label asp-for="Completed">Completed? </label>
+    <select asp-for="Completed">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+    </select>
+</form>
