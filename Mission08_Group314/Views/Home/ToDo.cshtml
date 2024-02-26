@@ -9,6 +9,8 @@
         //Category(Dropdown containing options: Home, School, Work, Church)
         //Completed(True/False) -->
 
+@model ToDo
+
 <form method="post">
     <label asp-for="Task">Task:</label>
     <input asp-for="Task" />
@@ -20,7 +22,7 @@
 
     <!-- limit 1-4 -->
     <label asp-for="Quadrant">Quandrant:</label>
-    <input asp-for="Quandrant" />
+    <input asp-for="Quadrant" />
     <br />
 
     <label asp-for="Category">Category: </label>

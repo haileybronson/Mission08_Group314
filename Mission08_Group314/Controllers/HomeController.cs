@@ -8,7 +8,7 @@ namespace Mission08_Group314.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View("ToDo");
         }
 
         [HttpGet]

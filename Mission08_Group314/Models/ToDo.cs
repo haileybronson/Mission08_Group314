@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Options;
+using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.Metrics;
 using System.Net.Security;
 
@@ -12,6 +13,9 @@ namespace Mission08_Group314.Models
         //Quadrant(Required)
         //Category(Dropdown containing options: Home, School, Work, Church)
         //Completed(True/False)
+
+        [Key]
+        [Required]
         public string Task {  get; set; } //primary key 
 
         public int DueDate { get; set; }
