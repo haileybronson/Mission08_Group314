@@ -2,6 +2,8 @@
 {
     public interface IToDoRepository
     {
-        List<ToDo> toDos { get; }
+        List<ToDo> ToDos { get; }
+
+        public void AddToDo(ToDo ToDo);
     }
 }

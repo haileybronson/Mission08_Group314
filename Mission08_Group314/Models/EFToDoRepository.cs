@@ -10,5 +10,11 @@
         }
 
         public List<ToDo> ToDos => _context.ToDos.ToList();
+
+        public void AddToDo(ToDo ToDo)
+        {
+            _context.Add(ToDo);
+            _context.SaveChanges();
+        }
     }
 }

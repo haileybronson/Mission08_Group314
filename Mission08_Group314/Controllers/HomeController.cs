@@ -7,12 +7,7 @@ namespace Mission08_Group314.Controllers
 {
     public class HomeController : Controller
     {
-        private ToDoFormContext _repo;
-
-        public IActionResult Index()
-        {
-            return View("ToDo");
-        }
+        private IToDoRepository _repo;
 
         public HomeController(IToDoRepository temp)
         {
@@ -30,13 +25,9 @@ namespace Mission08_Group314.Controllers
         //"ToDo" is the class set up in the model 
         public IActionResult ToDo(ToDo response) 
         {
-
             if (ModelState.IsValid)
             {
-                _context.ToDo.Add(response); //adds record to the database
-                _context.SaveChanges();
-
-                return View("Confirmation", response);
+                _repo.AddToDo(response);
             }
             else
             {

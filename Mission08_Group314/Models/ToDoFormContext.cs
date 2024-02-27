@@ -8,8 +8,6 @@ namespace Mission08_Group314.Models
         { 
         }
 
-        //do I need to change ToDo?
-
         public DbSet<ToDo> ToDos { get; set; }
 
     }
