@@ -22,7 +22,7 @@
 
     <!-- limit 1-4 -->
     <label asp-for="Quadrant">Quandrant:</label>
-    <input asp-for="Quadrant" />
+    <input asp-for="Quadrant" type="number" min="1" max="4" />
     <br />
 
     <label asp-for="Category">Category: </label>
@@ -40,4 +40,8 @@
         <option value="true">Yes</option>
         <option value="false">No</option>
     </select>
+    <br/> 
+
+    <button type="submit">Submit Movie</button>
+    <div asp-validation-summary="All"></div>
 </form>
