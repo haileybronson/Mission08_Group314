@@ -10,7 +10,7 @@ using Mission08_Group314.Models;
 namespace Mission08_Group314.Migrations
 {
     [DbContext(typeof(ToDoFormContext))]
-    [Migration("20240226214848_Initial")]
+    [Migration("20240227010444_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -31,8 +31,9 @@ namespace Mission08_Group314.Migrations
                     b.Property<bool>("Completed")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("DueDate")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("DueDate")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("Quadrant")
                         .HasColumnType("INTEGER");

@@ -28,8 +28,9 @@ namespace Mission08_Group314.Migrations
                     b.Property<bool>("Completed")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("DueDate")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("DueDate")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("Quadrant")
                         .HasColumnType("INTEGER");

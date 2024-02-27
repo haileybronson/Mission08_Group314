@@ -17,13 +17,13 @@ namespace Mission08_Group314.Models
         [Key]
         [Required]
         public string Task {  get; set; } //primary key 
-        public string DueDate { get; set; }
+        public string? DueDate { get; set; }
 
         [Required]
         public int Quadrant { get; set; }
 
-        public string Category { get; set; }
+        public string? Category { get; set; }
 
-        public bool Completed { get; set; }
+        public bool? Completed { get; set; }
     }
 }

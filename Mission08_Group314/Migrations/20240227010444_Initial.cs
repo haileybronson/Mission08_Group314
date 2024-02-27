@@ -15,7 +15,7 @@ namespace Mission08_Group314.Migrations
                 columns: table => new
                 {
                     Task = table.Column<string>(type: "TEXT", nullable: false),
-                    DueDate = table.Column<int>(type: "INTEGER", nullable: false),
+                    DueDate = table.Column<string>(type: "TEXT", nullable: false),
                     Quadrant = table.Column<int>(type: "INTEGER", nullable: false),
                     Category = table.Column<string>(type: "TEXT", nullable: false),
                     Completed = table.Column<bool>(type: "INTEGER", nullable: false)
