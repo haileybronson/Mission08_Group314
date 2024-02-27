@@ -17,7 +17,8 @@ namespace Mission08_Group314.Controllers
         [HttpGet]
         public IActionResult ToDo()
         {
-            return View("ToDo", new ToDo());
+            return View("ToDo");
+            //return View("ToDo", new ToDo());
         }
 
         [HttpPost]
@@ -28,6 +29,7 @@ namespace Mission08_Group314.Controllers
             if (ModelState.IsValid)
             {
                 _repo.AddToDo(response);
+                return View("Confirmation", response);
             }
             else
             {
