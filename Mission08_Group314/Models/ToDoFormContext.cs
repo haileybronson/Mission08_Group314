@@ -7,8 +7,7 @@ namespace Mission08_Group314.Models
         public ToDoFormContext(DbContextOptions<ToDoFormContext> options): base(options) 
         { 
         }
-
-        public DbSet<ToDo> ToDos { get; set; }
+        public DbSet<ToDo> ToDo { get; set; }
 
     }
 }

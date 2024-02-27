@@ -9,7 +9,7 @@
             _context = temp;
         }
 
-        public List<ToDo> ToDos => _context.ToDos.ToList();
+        public List<ToDo> ToDos => _context.ToDo.ToList();
 
         public void AddToDo(ToDo ToDo)
         {

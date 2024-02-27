@@ -3,7 +3,6 @@
     public interface IToDoRepository
     {
         List<ToDo> ToDos { get; }
-
         public void AddToDo(ToDo ToDo);
     }
 }
