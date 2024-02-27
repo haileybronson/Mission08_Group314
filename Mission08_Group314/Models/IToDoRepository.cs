@@ -2,5 +2,6 @@
 {
     public interface IToDoRepository
     {
+        List<ToDo> toDos { get; }
     }
 }

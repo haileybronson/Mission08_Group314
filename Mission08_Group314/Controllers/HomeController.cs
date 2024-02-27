@@ -7,16 +7,16 @@ namespace Mission08_Group314.Controllers
 {
     public class HomeController : Controller
     {
-        private ToDoFormContext _context;
+        private ToDoFormContext _repo;
 
         public IActionResult Index()
         {
             return View("ToDo");
         }
 
-        public HomeController(ToDoFormContext temp)
+        public HomeController(IToDoRepository temp)
         {
-            _context = temp;
+            _repo = temp;
         }
 
         [HttpGet]

@@ -11,6 +11,8 @@ builder.Services.AddDbContext<ToDoFormContext>(options =>
     options.UseSqlite(builder.Configuration["ConnectionStrings:BlahConnection"]);
 });
 
+builder.Services.AddScoped<IToDoRepository, EFToDoRepository>();
+
 
 var app = builder.Build();
 
