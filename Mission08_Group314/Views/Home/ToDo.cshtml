@@ -11,37 +11,58 @@
 
 @model ToDo
 
-<form method="post">
-    <label asp-for="Task">Task:</label>
-    <input asp-for="Task" />
+<div class="banner-container">
+    <div class="image-container">
+        <img src="~/img/addtaskbanner.jpg" class="img-fluid" alt="task banner">
+    </div>
+
+    <h1 class="banner-title">Add a Task</h1>
+</div>
+<br />
+<br />
+
+<form method="post" class="form-format">
+    <div class="form-group">
+        <label for="Task" class="h5">Task</label>
+        <input id="Task" name="Task" class="form-control input-box" />
+    </div>
     <br />
 
-    <label asp-for="DueDate">Due Date:</label>
-    <input asp-for="DueDate" />
-    <br>
-
-    <!-- limit 1-4 -->
-    <label asp-for="Quadrant">Quandrant:</label>
-    <input asp-for="Quadrant" type="number" min="1" max="4" />
+    <div class="form-group">
+        <label for="DueDate" class="h5">Due Date</label>
+        <input id="DueDate" name="DueDate" type="date" class="form-control input-box" />
+    </div>
     <br />
 
-    <label asp-for="Category">Category: </label>
-    <select asp-for="Category">
-        <option value="">select a rating</option>
-        <option value="Home">Home</option>
-        <option value="School">School</option>
-        <option value="Work">Work</option>
-        <option value="Church">Church</option>
-
-    </select>
+    <div class="form-group">
+        <label for="Quadrant" class="h5">Quadrant</label>
+        <input id="Quadrant" name="Quadrant" type="number" min="1" max="4" class="form-control input-box" />
+    </div>
     <br />
-    <label asp-for="Completed">Completed? </label>
-    <select asp-for="Completed">
-        <option value="true">Yes</option>
-        <option value="false">No</option>
-    </select>
-    <br/> 
 
-    <button type="submit">Submit</button>
-    <div asp-validation-summary="All"></div>
+    <div class="form-group">
+        <label for="Category" class="h5">Category</label>
+        <select id="Category" name="Category" class="form-control input-box">
+            <option value="">Select a category</option>
+            <option value="Home">Home</option>
+            <option value="School">School</option>
+            <option value="Work">Work</option>
+            <option value="Church">Church</option>
+        </select>
+    </div>
+    <br />
+
+    <div class="form-group">
+        <label for="Completed" class="h5">Completed?</label>
+        <select id="Completed" name="Completed" class="form-control">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select>
+    </div>
+    <br />
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <br />
+
+    <div asp-validation-summary="All" class="text-danger"></div>
 </form>

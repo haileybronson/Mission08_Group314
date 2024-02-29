@@ -13,11 +13,15 @@ namespace Mission08_Group314.Controllers
         {
             _repo = temp;
         }
-
+        public IActionResult Quadrants()
+        {
+            return View();
+            //return Quadrants View;
+        }
         [HttpGet]
         public IActionResult ToDo()
         {
-            return View("ToDo");
+            return View();
             //return View("ToDo", new ToDo());
         }
 
