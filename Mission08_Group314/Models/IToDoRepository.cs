@@ -3,6 +3,9 @@
     public interface IToDoRepository
     {
         List<ToDo> ToDos { get; }
-        public void AddToDo(ToDo ToDo);
+        void AddToDo(ToDo toDo);
+        void Update(ToDo toDo);
+        void Delete(ToDo deletedRecord);
+        ToDo GetTaskId(int id);
     }
 }
