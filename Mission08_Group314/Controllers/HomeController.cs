@@ -19,7 +19,7 @@ namespace Mission08_Group314.Controllers
         [HttpGet]
         public IActionResult ToDo()
         {
-            return View();
+            return View("ToDo", new ToDo());
         }
 
         [HttpPost]
